@@ -16,3 +16,7 @@ Given a screenshot it tells that to which category it belongs. Built using CNN i
 ## License
 - It is a free tool to use
 - It is an implementation of [Screenshot Classifier Using CNNs](https://www.academia.edu/37050593/Screenshot_Classification_Using_Convolututional_Neural_Networks)
+
+
+
+[![Run on FloydHub](https://static.floydhub.com/button/button-small.svg)](https://floydhub.com/run)
