@@ -1,7 +1,7 @@
 machine: cpu
 input:
-  - source: asimraja/datasets/screenshots/1/resized_data
-    destination: screenshots
+  - source: asimraja/datasets/screenshots/
+    destination: data
 env: tensorflow-1.8
 description: Screenshot classification with CNNs
-command: python3 project3.py
+command: python3 train.py
