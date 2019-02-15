@@ -1,0 +1,5 @@
+env: tensorflow-1.8
+machine: cpu
+input:
+  - source: asimraja/datasets/screenshots/1
+    destination: data
