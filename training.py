@@ -25,7 +25,9 @@ from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 import os
 import time
-import imageio
+
+import warnings
+warnings.filterwarnings("ignore")
 
 
 def generate_training_data(folder):
@@ -74,7 +76,7 @@ def generate_training_data(folder):
     return bag
 
 
-bag = generate_training_data("data/resized_data")
+bag = generate_training_data("/floyd/input/data/resized_data")
 random.shuffle(bag)
 i = 0
 data = []
