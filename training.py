@@ -100,11 +100,12 @@ max_0 = max_pool_2d(convnet, 5)
 
 convnet = fully_connected(max_0, 128, activation='relu')
 convnet = dropout(convnet, 0.4)
+convnet = fully_connected(convnet, 256, activation='relu')
 convnet = fully_connected(convnet, 6, activation='softmax')
-convnet = regression(convnet, optimizer='adam', learning_rate=0.005,
+convnet = regression(convnet, optimizer='adam', learning_rate=0.001,
                      loss='categorical_crossentropy', name='ScreenshotClassifier')
 model = tflearn.DNN(convnet, tensorboard_dir='log', tensorboard_verbose=3)
-model.fit(X_train, y_train, batch_size=32, n_epoch=20, validation_set=(X_test, y_test), snapshot_step=20, show_metric=True,
+model.fit(X_train, y_train, batch_size=64, n_epoch=15, validation_set=(X_test, y_test), snapshot_step=20, show_metric=True,
           run_id='ScreenshotClassifier')
 print("Saving the model")
 model.save('model.tflearn')
