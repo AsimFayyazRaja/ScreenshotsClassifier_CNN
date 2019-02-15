@@ -29,8 +29,6 @@ import time
 import warnings
 warnings.filterwarnings("ignore")
 
-print(os.listdir('data'))
-
 def generate_training_data(folder):
     r = 0
     "Gets images for training, adds labels and returns training data"
@@ -77,7 +75,7 @@ def generate_training_data(folder):
     return bag
 
 
-bag = generate_training_data("/data/resized_data")
+bag = generate_training_data("/floyd/input/data/resized_data")
 random.shuffle(bag)
 i = 0
 data = []
